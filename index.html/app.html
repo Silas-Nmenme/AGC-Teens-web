@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teen's Church | AGC Akowonjo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar">
+    <div class="nav-container">
+        <span class="nav-logo">AGC Akowonjo Teen's</span>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Welcome to AGC Akowonjo Teen's Church</h1>
+            <p>Empowering Teens. Growing in Faith. Building Friendships.</p>
+            <button onclick="scrollToSection('about')">Learn More</button>
+        </div>
+        <div class="cube-container">
+  <div class="cube" id="cube">
+    <div class="face front">Faith</div>
+    <div class="face back">Hope</div>
+    <div class="face right">Love</div>
+    <div class="face left">Joy</div>
+    <div class="face top">Unity</div>
+    <div class="face bottom">Fun</div>
+  </div>
+</div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>
+            We are a vibrant community of teenagers passionate about Jesus, friendship, and making a difference. Join us for fun events, inspiring worship, and real conversations!
+        </p>
+        <a href="About.html" class="btn">Read More</a>
+    </section>
+
+    <!-- Events Section -->
+ <section id="events">
+    <h2>Upcoming Events</h2>
+    <div id="event-countdown" style="margin: 18px 0; font-weight: bold; color: #2575fc;"></div>
+    <ul>
+        <li>Teen meetings – Mondays, 5pm</li>
+        <li>Church Worship Service – Sundays, 9am</li>
+        <li>Community Outreach – Monthly</li>
+    </ul>
+</section>
+    </section>
+
+<!-- Blog section -->
+<section id="blog">
+    <h2>Latest News & Blog</h2>
+    <div class="blog-list">
+        <article>
+            <h3>Teen Camp 2025: A Life-Changing Experience!</h3>
+            <p>Our annual camp was filled with worship, games, and new friendships. Read more about the highlights and testimonies from this year’s camp.</p>  
+        </article>
+        <article>
+            <h3>Community Outreach: Making a Difference</h3>
+            <p>Last month, our teens volunteered in the local community, spreading love and hope. Discover how you can get involved in our next outreach!</p>
+        </article>
+    </div>
+</section>
+
+<!-- Photo gallery section -->
+<section id="gallery">
+    <h2>Photo Gallery</h2>
+    <div class="gallery-grid">
+        <img src="images/gallery1.jpg" alt="Teens Worshipping">
+        <img src="images/gallery2.jpg" alt="Fun Event">
+        <img src="images/gallery3.jpg" alt="Group Photo">
+        <img src="images/gallery4.jpg" alt="Outreach">
+    </div>
+    <div class="gallery-3d-card" id="gallery3d">
+  <div class="gallery-3d-inner">
+    <div class="gallery-3d-front">Welcome!</div>
+    <div class="gallery-3d-back">AGC Teens</div>
+  </div>
+</div>
+</section>
+
+<!-- Testimonial -->
+<section id="testimonials">
+    <h2>What Teen's Say</h2>
+    <div class="testimonials-list">
+        <blockquote>
+            "I've made lifelong friends and grown so much in my faith!"<br>
+            <span>- Sarah, 16</span>
+        </blockquote>
+        <blockquote>
+            "The events are always fun and inspiring."<br>
+            <span>- Daniel, 15</span>
+        </blockquote>
+    </div>
+</section>
+    
+<!-- Newsletter Section -->
+<section id="newsletter">
+    <h2>Stay Updated</h2>
+    <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
+        <input type="email" placeholder="Your email" required>
+        <button type="submit">Subscribe</button>
+    </form>
+    <div id="newsletter-message"></div>
+</section>
+
+<!-- Prayer request section -->
+<section id="prayer">
+    <h2>Prayer Request</h2>
+    <form class="prayer-form" onsubmit="submitPrayer(event)">
+        <input type="text" placeholder="Your Name" required>
+        <textarea placeholder="Your Prayer Request" required></textarea>
+        <button type="submit">Send Request</button>
+    </form>
+    <div id="prayer-message"></div>
+</section>
+
+<!-- Add before the contact section -->
+<section id="team">
+    <h2>Meet Our Leaders</h2>
+    <div class="team-grid">
+        <div class="team-member">
+            <img src="images/leader1.jpg" alt="Youth Pastor">
+            <h4>Pastor John</h4>
+            <p>Youth Pastor</p>
+        </div>
+        <div class="team-member">
+            <img src="images/leader2.jpg" alt="Assistant Leader">
+            <h4>Jane Smith</h4>
+            <p>Assistant Leader</p>
+        </div>
+        <div class="team-member">
+            <img src="images/leader3.jpg" alt="Music Director">
+            <h4>Michael Lee</h4>
+            <p>Music Director</p>
+        </div>
+    </div>
+</section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Have questions or want to join? Email us at <a href="mailto:teens@agcakowonjo.org">teens@agcakowonjo.org</a></p>
+        <div class="address-map-box">
+            <div class="address-info">
+                <strong>Our Location:</strong><br>
+                20/22 Omo-Oba Jesu Street,<br>
+                Akowonjo, Lagos State, Nigeria
+            </div>
+            <div class="map-visual">
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1982.496893557512!2d3.307497!3d6.601234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8f2e2e2e2e2e%3A0x1234567890abcdef!2s20%2F22%20Omo-Oba%20Jesu%20St%2C%20Akowonjo%2C%20Lagos%2C%20Nigeria!5e0!3m2!1sen!2sng!4v1720350000000!5m2!1sen!2sng"
+        width="220"
+        height="140"
+        style="border:0; border-radius:12px;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</div>
+        </div>
+        <!-- Social link -->
+<div class="social-links">
+    <a href="https://instagram.com/" target="_blank" rel="noopener" title="Instagram">Instagram</a> |
+    <a href="https://facebook.com/" target="_blank" rel="noopener" title="Facebook">Facebook</a>
+</div>
+    </section>
+    <script src="homes.js"></script>
+</body>
+</html>
