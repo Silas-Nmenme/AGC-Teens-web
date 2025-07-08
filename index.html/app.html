@@ -56,6 +56,12 @@
         <li>Community Outreach – Monthly</li>
     </ul>
 </section>
+<form class="event-rsvp" onsubmit="registerEvent(event)">
+  <input type="text" placeholder="Your Name" required>
+  <input type="email" placeholder="Your Email" required>
+  <button type="submit">RSVP</button>
+</form>
+<div id="rsvp-message"></div>
     </section>
 
 <!-- Blog section -->
@@ -74,20 +80,34 @@
 </section>
 
 <!-- Photo gallery section -->
+<!-- Photo gallery section -->
 <section id="gallery">
     <h2>Photo Gallery</h2>
     <div class="gallery-grid">
         <img src="images/gallery1.jpg" alt="Teens Worshipping">
         <img src="images/gallery2.jpg" alt="Fun Event">
         <img src="images/gallery3.jpg" alt="Group Photo">
-        <img src="images/gallery4.jpg" alt="Outreach">
+        <img src="images/outreach.jpg" alt="Community Outreach">
     </div>
     <div class="gallery-3d-card" id="gallery3d">
-  <div class="gallery-3d-inner">
-    <div class="gallery-3d-front">Welcome!</div>
-    <div class="gallery-3d-back">AGC Teens</div>
+      <div class="gallery-3d-inner">
+        <div class="gallery-3d-front">Welcome!</div>
+        <div class="gallery-3d-back">AGC Teens</div>
+      </div>
+    </div>
+<section id="media">
+  <h2>Sermon & Media Library</h2>
+  <div class="media-library">
+    <video controls width="320" poster="images/sermon-thumb.jpg">
+      <source src="media/sample-sermon.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <audio controls>
+      <source src="media/sample-audio.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
   </div>
-</div>
+</section>
 </section>
 
 <!-- Testimonial -->
@@ -177,5 +197,15 @@
 </div>
     </section>
     <script src="homes.js"></script>
+        <div id="chat-widget" class="chat-widget">
+      <div class="chat-header" onclick="toggleChat()">💬 Need Help? Chat with us!</div>
+      <div class="chat-body" id="chat-body">
+        <div class="chat-message bot">Hi! How can we help you today?</div>
+      </div>
+      <form class="chat-input" onsubmit="sendChat(event)">
+        <input type="text" id="chat-input-field" placeholder="Type your message..." autocomplete="off" required>
+        <button type="submit">Send</button>
+      </form>
+    </div>
 </body>
 </html>

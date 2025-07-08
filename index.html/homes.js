@@ -44,3 +44,56 @@ cube.addEventListener('click', () => {
   spinning = !spinning;
   cube.style.animationPlayState = spinning ? 'running' : 'paused';
 });
+function toggleChat() {
+  const widget = document.getElementById('chat-widget');
+  widget.classList.toggle('closed');
+  if (widget.classList.contains('closed')) {
+    widget.style.maxHeight = '40px';
+  } else {
+    widget.style.maxHeight = '400px';
+  }
+}
+function sendChat(event) {
+  event.preventDefault();
+  const input = document.getElementById('chat-input-field');
+  const chatBody = document.getElementById('chat-body');
+  const userMsg = document.createElement('div');
+  userMsg.className = 'chat-message user';
+  userMsg.textContent = input.value;
+  chatBody.appendChild(userMsg);
+
+  // Simple bot response
+  const botMsg = document.createElement('div');
+  botMsg.className = 'chat-message bot';
+  if (input.value.toLowerCase().includes('faith')) {
+    botMsg.textContent = "Faith means trusting God even when you can't see the whole path. 🙏";
+  } else if (input.value.toLowerCase().includes('event')) {
+    botMsg.textContent = "Our next event is on Monday at 5pm! Check the Events section for more.";
+  } else {
+    botMsg.textContent = "Thanks for reaching out! A leader will respond soon.";
+  }
+  setTimeout(() => chatBody.appendChild(botMsg), 600);
+  input.value = '';
+  chatBody.scrollTop = chatBody.scrollHeight;
+}
+function registerEvent(event) {
+  event.preventDefault();
+  document.getElementById('rsvp-message').textContent =
+    "Thank you for registering! We'll see you at the event.";
+}
+function askNotificationPermission() {
+  if ('Notification' in window && Notification.permission !== 'granted') {
+    Notification.requestPermission().then(permission => {
+      if (permission === 'granted') {
+        new Notification('AGC Teens', {
+          body: 'Stay tuned for our next event!',
+          icon: 'images/logo.png'
+        });
+      }
+    });
+  }
+}
+window.onload = function() {
+  updateCountdown();
+  askNotificationPermission();
+};
